@@ -14,3 +14,4 @@ John Doe, Data Wrangler 1, johnsGithubUsername
 
 ## Signatures:
 Kenneth Ring, Test Engineer 2, Cronotekk
+Adam Tupitza, Back End Engineer 1, avtmadison
