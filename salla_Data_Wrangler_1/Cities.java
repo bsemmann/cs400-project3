@@ -27,9 +27,9 @@ public class Cities {
 				String names[] = line.split(","); // splitting the lines in the file which is comma-separated
 
 				if (!(cities.containsVertex(names[0])) || !(cities.containsVertex(names[1]))) { // add a vertex to the
-																								// graph only if it does
-																								// not already exist
-																								// in the graph to prevent duplicate vertices
+													        // graph only if it does
+														// not already exist
+														// in the graph to prevent duplicate vertices
 					cities.insertVertex(names[0]);
 					cities.insertVertex(names[1]);
 				}
