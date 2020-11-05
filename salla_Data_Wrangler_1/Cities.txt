@@ -1,22 +1,22 @@
-Eau Claire, Wausau, 99
-Eau Claire, La Crosse, 85
-Eau Claire, Oshkosh, 183
-Wausau, Green Bay, 97
-Wausau, Appleton, 103
-La Crosse, Appleton, 170
-La Crosse, Wausau, 145
-Appleton, Eau Claire, 182
-Appleton, Madison, 105
-Appleton, Milwaukee, 107
-Appleton, Green Bay, 30
-Green Bay, Milwaukee, 117
-Green Bay, Oshkosh, 50
-Milwaukee, Kenosha, 40
-Kenosha, Oshkosh, 123
-Oshkosh, Appleton, 20
-Oshkosh, Milwaukee, 88
-Janesville, Kenosha, 71
-Janesville, Oshkosh, 107
-Madison, Oshkosh, 93
-Madison, Janesville, 40 
-Madison, La Crosse, 140
+Eau Claire,Wausau,99
+Eau Claire,La Crosse,85
+Eau Claire,Oshkosh,183
+Wausau,Green Bay,97
+Wausau,Appleton,103
+La Crosse,Appleton,170
+La Crosse,Wausau,145
+Appleton,Eau Claire,182
+Appleton,Madison,105
+Appleton,Milwaukee,107
+Appleton,Green Bay,30
+Green Bay,Milwaukee,117
+Green Bay,Oshkosh,50
+Milwaukee,Kenosha,40
+Kenosha,Oshkosh,123
+Oshkosh,Appleton,20
+Oshkosh,Milwaukee,88
+Janesville,Kenosha,71
+Janesville,Oshkosh,107
+Madison,Oshkosh,93
+Madison,Janesville,40
+Madison,La Crosse,140
