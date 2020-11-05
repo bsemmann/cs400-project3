@@ -16,3 +16,4 @@ John Doe, Data Wrangler 1, johnsGithubUsername
 Kenneth Ring, Test Engineer 2, Cronotekk
 Adam Tupitza, Back End Engineer 1, avtmadison
 Mason Hurless, Test Engineer 1, mwhurless
+Sriram Alla, Data Wrangler 1, SriramAlla123
