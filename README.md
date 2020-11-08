@@ -17,3 +17,4 @@ Kenneth Ring, Test Engineer 2, Cronotekk
 Adam Tupitza, Back End Engineer 1, avtmadison
 Mason Hurless, Test Engineer 1, mwhurless
 Sriram Alla, Data Wrangler 1, SriramAlla123
+Bhuvanesh Reddy Bathala, Front End Engineer, bhuvi3131
