@@ -116,9 +116,9 @@ public class FrontEndWisconsinMap {
 		
 		CS400Graph map = cities.cities;
 		
-		String startCity;
-		String destination;
-		int choice;
+		String startCity = null;
+		String destination = null;
+		int choice = 0;
 		String startPrompt = "What city are you coming from?";
 		String endPrompt = "What city do you want to travel too?";
 		
@@ -127,19 +127,40 @@ public class FrontEndWisconsinMap {
 		System.out.println("(Type exit anytime to exit the map)");
 		System.out.println();
 		
-		startCity = promptString(scnr, startPrompt);
+		try {
+			startCity = promptString(scnr, startPrompt);
+			cbe.getRandomDestination(startCity);
+		}
+		catch(IllegalArgumentException e) {
+			String errorPrompt = "The entered city does not exist in the map! \n"
+					+ "Please enter another city: ";
+			startCity = promptString(scnr, errorPrompt);
+			
+		}
 		
 		while (!startCity.equalsIgnoreCase("exit")) {
 			
+			try {
 			System.out.println("Would you like to input a destination or get a random one?");
 			System.out.println("(Enter 1 for input/2 for random)");
 			choice = promptInt(scnr,1,2);
+			
+			
 			if (choice == 1) {
 				destination = promptString(scnr, endPrompt);
+				cbe.getRandomDestination(destination);
 			} else {
 				destination = cbe.getRandomDestination(startCity);
 				System.out.println("Your random destination is " + destination);
 			}
+			
+			} catch(IllegalArgumentException e) {
+				String errorPrompt = "The entered city does not exist in the map! \n"
+						+ "Please enter another city: ";
+				destination = promptString(scnr, errorPrompt);
+				
+			}
+			
 			System.out.println();
 			System.out.println("What would you like to know about this route?");
 			System.out.println("1. Distance between cities");
@@ -188,3 +209,4 @@ public class FrontEndWisconsinMap {
 		scnr.close();
 	}
 }
+
