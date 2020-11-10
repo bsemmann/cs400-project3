@@ -1,5 +1,3 @@
-// --== CS400 File Header Information ==--
-// Name: <Bhuvanesh Reddy Bathala>
 // Email: <bbreddy@wisc.edu email address>
 // Team: <the team name: ff>
 // Role: <Front End Engineer>
@@ -15,6 +13,8 @@ public class CitiesFrontEnd {
   static Cities city2 = new Cities();
 
   public static void main(String[] args) {
+    int exit=1;
+ do {
     try {
       System.out.println("****************************************************");
       System.out.println("Welcome to Interactive Map Of Wisconsin");
@@ -23,28 +23,40 @@ public class CitiesFrontEnd {
       System.out.println("2->Get distance to your destination");
       System.out.println("3->Get travel time to your destination");
       System.out.println("4->Get random destination");
+      System.out.println("Enter 0 to exit");
       System.out.println("****************************************************");
       Scanner input = new Scanner(System.in);// declaring a scanner object
 
-      int option = input.nextInt();// inputing an integer
-      if (option != 1 && option != 2 && option != 3 && option != 4) {
-        throw new NoSuchElementException("no number ");//throws exception if user inputs number 
-                                                       //other than 1,2,3,4
+      int option = input.nextInt();// input an integer
+     
+      if (option !=0 && option != 1 && option != 2 && option != 3 && option != 4) {
+        throw new NoSuchElementException("no number ");// throws exception if user inputs number
+                                                       // other than 1,2,3,4
       }
-      if (option == 1) { // checking if the option is equal to 1
+      switch(option){
+        case 0:{
+          System.out.println("****************************************************");
+          System.out.println("Have a Great Trip. Bye!!");
+          System.out.println("****************************************************");
+          
+          return;
+        }
+
+        case 1: { // checking if the option is equal to 1
         System.out.println("Choose Starting point");
-        String startPoint = input.nextLine();// inputting the user's initial location
+        String startPoint = input.nextLine();// input the user's initial location
         startPoint = input.nextLine();
         if ((city.cityGraph.containsVertex(startPoint)) == false) {
-          throw new NoSuchElementException("no initialpoint ");//throws exception if location not in
-                                                              //graph 
+          throw new NoSuchElementException("no initialpoint ");// throws exception if location not
+                                                               // in
+                                                               // graph
         }
-        System.out.println("Choose Destination");// inputting the user's destination
+        System.out.println("Choose Destination");// input the user's destination
         String destination = input.nextLine();
         // destination = input.nextLine();
         if ((city.cityGraph.containsVertex(destination)) == false) {
-          throw new NoSuchElementException("no destination ");//throws exception if destination not 
-                                                             // in graph
+          throw new NoSuchElementException("no destination ");// throws exception if destination not
+                                                              // in graph
         }
         System.out.println("****************************************************");
         System.out.println("The shortest route to your destination is");
@@ -52,44 +64,36 @@ public class CitiesFrontEnd {
         System.out.println(route);
         System.out.println("****************************************************");
         System.out.println("Choose 0 to end and 1 to continue");
-        option = input.nextInt();// inputing an integer
-        if (option != 1 && option != 0 ) {
-          throw new NoSuchElementException("Not able to continue ");//throws exception if user inputs number 
-          //other than 0,1
+         exit = input.nextInt();// input an integer
+        if (exit != 1 && exit != 0) {
+          throw new NoSuchElementException("Not able to continue ");// throws exception if user
+                                                                    // inputs number
+          // other than 0,1
         }
         System.out.println("****************************************************");
-        if (option == 0) {
+        if (exit == 0) {
           System.out.println("Have a Great Trip. Bye!!");
           System.out.println("****************************************************");
+          return;
         }
-        if (option == 1) {
-          System.out.println("What do you want to do next");
-          System.out.println("1->Get shortest route to your path");
-          System.out.println("2->Get Distance to your destination");
-          System.out.println("3->Get TravelTime to your destination");
-          System.out.println("4->Get Random Destination");
-          option = input.nextInt();// inputing an integer
-          if (option != 1 && option != 2 && option != 3 && option != 4) {
-            throw new NoSuchElementException("no number ");//throws exception if user inputs number 
-            //other than 1,2,3,4
-          }
-          System.out.println("****************************************************");
-        }
+      
       }
-
-      if (option == 2) {
+       break;
+       
+        case 2: {
         System.out.println("Choose Starting point");
-        String startPoint = input.nextLine();// inputting the user's initial location
+        String startPoint = input.nextLine();// input the user's initial location
         startPoint = input.nextLine();
         if ((city.cityGraph.containsVertex(startPoint)) == false) {
-          throw new NoSuchElementException("no initialpoint ");//throws exception if location not in
-          //graph 
+          throw new NoSuchElementException("no initialpoint ");// throws exception if location not
+                                                               // in
+          // graph
         }
         System.out.println("Choose Destination point");
         String destination = input.nextLine();
-        
+
         if ((city.cityGraph.containsVertex(destination)) == false) {
-          throw new NoSuchElementException("no destination ");//throws exception if destination not 
+          throw new NoSuchElementException("no destination ");// throws exception if destination not
           // in graph
         }
         System.out.println("****************************************************");
@@ -100,50 +104,43 @@ public class CitiesFrontEnd {
         System.out.println("****************************************************");
         System.out.println("Choose 0 to end and 1 to continue");
 
-        option = input.nextInt();// inputing an integer
-        if (option != 1 && option != 0 ) {
-          throw new NoSuchElementException("no number ");//throws exception if user inputs number 
-          //other than 0,1
+        exit = input.nextInt();// input an integer
+        if (exit != 1 && exit != 0) {
+          throw new NoSuchElementException("no number ");// throws exception if user inputs number
+          // other than 0,1
         }
         System.out.println("****************************************************");
-        if (option == 0) {
+        if (exit == 0) {
           System.out.println("Have a Great Trip. Bye!!");
           System.out.println("****************************************************");
+          return;
         }
-        if (option == 1) {
-          System.out.println("What do you want to do next");
-          System.out.println("1->Get shortest route to your path");
-          System.out.println("2->Get Distance to your destination");
-          System.out.println("3->Get TravelTime to your destination");
-          System.out.println("4->Get Random Destination");
-          option = input.nextInt();// inputing an integer
-          if (option != 1 && option != 2 && option != 3 && option != 4) {
-            throw new NoSuchElementException("no number ");//throws exception if user inputs number 
-            //other than 1,2,3,4
-          }
-          System.out.println("****************************************************");
+        
         }
+      
 
-      }
-
-      if (option == 3) {
+      
+        break;
+        
+        case 3: {
         System.out.println("Choose Starting point");
-        String startPoint = input.nextLine();// inputting the user's initial location
+        String startPoint = input.nextLine();// input the user's initial location
         startPoint = input.nextLine();
         if ((city.cityGraph.containsVertex(startPoint)) == false) {
-          throw new NoSuchElementException("no initialpoint ");//throws exception if location not in
-          //graph 
+          throw new NoSuchElementException("no initialpoint ");// throws exception if location not
+                                                               // in
+          // graph
         }
         System.out.println("Choose Destination point");
         String destination = input.nextLine();
         // destination = input.nextLine();
         if ((city.cityGraph.containsVertex(destination)) == false) {
-          throw new NoSuchElementException("no destination ");//throws exception if destination not 
+          throw new NoSuchElementException("no destination ");// throws exception if destination not
           // in graph
         }
         System.out.println("Input your speed in mph");
         int speed = input.nextInt();
-        if(speed<0) {
+        if (speed < 0) {
           throw new NoSuchElementException(" Impossible speed");
         }
         System.out.println("****************************************************");
@@ -156,35 +153,23 @@ public class CitiesFrontEnd {
         System.out.println(travelTime + " min");
         System.out.println("****************************************************");
         System.out.println("Choose 0 to end and 1 to continue");
-        option = input.nextInt();// inputing an integer
-        if (option != 1 && option != 0 ) {
-          throw new NoSuchElementException("no number ");//throws exception if user inputs number 
-          //other than 0,1
+        exit = input.nextInt();// input an integer
+        if (exit != 1 && exit != 0) {
+          throw new NoSuchElementException("no number ");// throws exception if user inputs number
+          // other than 0,1
         }
         System.out.println("****************************************************");
-        if (option == 0) {
+        if (exit == 0) {
           System.out.println("Have a Great Trip. Bye!!");
           System.out.println("****************************************************");
+          return;
         }
-        if (option == 1) {
-          System.out.println("What do you want to do next");
-          System.out.println("1->Get shortest route to your path");
-          System.out.println("2->Get Distance to your destination");
-          System.out.println("3->Get TravelTime to your destination");
-          System.out.println("4->Get Random Destination");
-          option = input.nextInt();// inputing an integer
-          if (option != 1 && option != 2 && option != 3 && option != 4) {
-            throw new NoSuchElementException("no number ");//throws exception if user inputs number 
-            //other than 1,2,3,4
-          }
-          System.out.println("****************************************************");
         }
-
-      }
-
-      if (option == 4) {
+        break;
+    
+        case 4: {
         System.out.println("Choose Starting point");
-        String startPoint = input.nextLine();// inputting the user's initial location
+        String startPoint = input.nextLine();// input the user's initial location
         startPoint = input.nextLine();
         if ((city.cityGraph.containsVertex(startPoint)) == false) {
           throw new NoSuchElementException("no initialpoint ");
@@ -205,43 +190,38 @@ public class CitiesFrontEnd {
         System.out.println("The time to reach the location");
         System.out.println("Input your Speed");
         int speed = input.nextInt();
-        if(speed<0) {
-          throw new NoSuchElementException(" Impossible speed");//throws exception when negative
-                                                                //number is input
+        if (speed < 0) {
+          throw new NoSuchElementException(" Impossible speed");// throws exception when negative
+                                                                // number is input
         }
         int time = option3(distance, speed);// getting random city
         System.out.println(time + " min");
         System.out.println("****************************************************");
-        System.out.println("Choose 0 to end and 1 to continue");
-        option = input.nextInt();// inputing an integer
-        if (option != 1 && option != 0 ) {
-          throw new NoSuchElementException("no number ");//throws exception if user inputs number 
-          //other than 0,1
+        System.out.println("Choose 0 to end");
+        exit = input.nextInt();// inputing an integer
+        if (exit != 1 && exit != 0) {
+          throw new NoSuchElementException("no number ");// throws exception if user inputs number
+          // other than 0,1
         }
         System.out.println("****************************************************");
-        if (option == 0) {
+        if (exit == 0) {
           System.out.println("Have a Great Trip. Bye!!");
           System.out.println("****************************************************");
+          return;
         }
-        if (option == 1) {
-          System.out.println("What do you want to do next");
-          System.out.println("1->Get shortest route to your path");
-          System.out.println("2->Get Distance to your destination");
-          System.out.println("3->Get TravelTime to your destination");
-          System.out.println("4->Get Random Destination");
-          option = input.nextInt();// inputing an integer
-          if (option != 1 && option != 2 && option != 3 && option != 4) {
-            throw new NoSuchElementException("no number ");//throws exception if user inputs number 
-            //other than 1,2,3,4
-          }
-          System.out.println("****************************************************");
-          
-        }
-      }
-    } catch (NoSuchElementException e) {
-      System.out.println(e);
+  
+        
 
+        
+        }
+        break;
+      }
     }
+     catch (NoSuchElementException e) {
+      System.out.println(e);//displays NoSuchElementException
+    
+    }
+ }while(true); 
   }
 
   /**
@@ -296,3 +276,4 @@ public class CitiesFrontEnd {
     return randomLocation;// return the location
   }
 }
+
