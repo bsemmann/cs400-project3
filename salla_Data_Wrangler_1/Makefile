@@ -6,9 +6,10 @@ compile:
 	javac Cities.java
 	javac CitiesBackEnd.java
 	javac FrontEndWisconsinMap.java
+	javac -cp .:junit5.jar CityTest.java
 
 test:
-	@echo "FIXME: *test* should run all your group's testing engineer's JUnit tests for the application"
+	java -jar junit5.jar --class-path . --scan-classpath --details tree
 
 clean:
 	$(RM) *.class
