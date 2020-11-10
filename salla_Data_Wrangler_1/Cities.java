@@ -34,7 +34,7 @@ public class Cities {
 														// not already exist
 													        // in the graph to
 														// prevent duplicate
-																								// vertices
+														// vertices
 					cities.insertVertex(names[0]);
 					cities.insertVertex(names[1]);
 				}
