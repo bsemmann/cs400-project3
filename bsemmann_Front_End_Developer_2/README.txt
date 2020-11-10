@@ -7,7 +7,7 @@ the team's GitHub repo.
 Name of submitting team member: Brian Semmann
 Wisc email of submitting team member: bsemmann@wisc.edu
 Team name: Team FF
-Role of submitting team member: Front End Developer
+Role of submitting team member: Front End Developer 2
 TA: Abhay Kumar
 Lecturer: Gary Dahl
 
