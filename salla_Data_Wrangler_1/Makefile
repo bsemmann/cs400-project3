@@ -1,8 +1,11 @@
 run: compile
-	@echo "FIXME: *run* should be the default target and compile and execute your code."
+	java FrontEndWisconsinMap
 
 compile:
-	@echo "FIXME: *compile* should compile your code"
+	javac CS400Graph.java
+	javac Cities.java
+	javac CitiesBackEnd.java
+	javac FrontEndWisconsinMap.java
 
 test:
 	@echo "FIXME: *test* should run all your group's testing engineer's JUnit tests for the application"
