@@ -1,0 +1,44 @@
+Eau Claire,Wausau,99
+Eau Claire,La Crosse,85
+Eau Claire,Oshkosh,183
+Wausau,Green Bay,97
+Wausau,Appleton,103
+La Crosse,Appleton,170
+La Crosse,Wausau,145
+Appleton,Eau Claire,182
+Appleton,Madison,105
+Appleton,Milwaukee,107
+Appleton,Green Bay,30
+Green Bay,Milwaukee,117
+Green Bay,Oshkosh,50
+Milwaukee,Kenosha,40
+Kenosha,Oshkosh,123
+Oshkosh,Appleton,20
+Oshkosh,Milwaukee,88
+Janesville,Kenosha,71
+Janesville,Oshkosh,107
+Madison,Oshkosh,93
+Madison,Janesville,40
+Madison,La Crosse,140
+Wausau,Eau Claire,99
+La Crosse,Eau Claire,85
+Oshkosh,Eau Claire,183
+Green Bay,Wausau,97
+Appleton,Wausau,103
+Appleton,La Crosse,170
+Wausau,La Crosse,145
+Eau Claire,Appleton,182
+Madison,Appleton,105
+Milwaukee,Appleton,107
+Green Bay,Appleton,30
+Milwaukee,Green Bay,117
+Oshkosh,Green Bay,50
+Kenosha,Milwaukee,40
+Oshkosh,Kenosha,123
+Appleton,Oshkosh,20
+Milwaukee,Oshkosh,88
+Kenosha,Janesville,71
+Oshkosh,Janesville,107
+Oshkosh,Madison,93
+Janesville,Madison,40
+La Crosse,Madison,140
